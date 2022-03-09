@@ -25,5 +25,5 @@ def find_info():
 
 
 if __name__ == '__main__':
-    app.run(debug=os.environ.get('DEBUG'))
+    app.run(debug= False if os.environ.get('DEBUG') == 'False' else True)
 
