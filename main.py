@@ -7,6 +7,10 @@ app = Flask(__name__)
 key = os.environ.get('ALOH_AMORA')
 gate = f'https://geo.ipify.org/api/v2/country?apiKey={key}&ipAddress=0.0.0.0'
 
+@app.route('/')
+def home():
+    return "<h1>Namaste</h1>"
+
 @app.route('/api-endpoint/', methods=['GET', 'POST'])
 def find_info():
     address = request.args['address']
