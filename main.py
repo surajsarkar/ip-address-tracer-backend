@@ -1,3 +1,4 @@
+from distutils.log import debug
 from flask import Flask, request, jsonify
 import requests
 import os
@@ -24,5 +25,5 @@ def find_info():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=os.environ.get('DEBUG'))
 
